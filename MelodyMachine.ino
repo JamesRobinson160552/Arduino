@@ -1,3 +1,11 @@
+///////////////////////////////////////////////////////////////////////////////////
+//  Author: James Robinson
+//
+//  Allows the user to select a key using a pot and creates a melody in that key
+//  The play button will play the current melody on a buzzer
+///////////////////////////////////////////////////////////////////////////////////
+
+
 int playButtonPin = A4;
 int pauseButtonPin = A3;
 int resetButtonPin = A2;

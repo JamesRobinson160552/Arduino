@@ -1,4 +1,9 @@
-
+/////////////////////////////////////////////////////////////////////////////////////////////////////////
+//  Author: James Robinson
+//
+//  Displays a pattern on 4 leds and requires the user to press the 
+//  corresponding buttons in order to continue
+/////////////////////////////////////////////////////////////////////////////////////////////////////////
 int leftLedPin = 9;
 int upLedPin = 13;
 int rightLedPin = 11;
@@ -147,6 +152,7 @@ void setup() {
   Serial.begin(9600);
   randomSeed(analogRead(0));
 
+//Buffer//////////////////////////////////////////
   for(int x=0;x<5;x++){
     digitalWrite(successLed,HIGH);
     delay(300);
@@ -160,6 +166,8 @@ void setup() {
     digitalWrite(failLed,LOW);
     delay(300);
   }
+/////////////////////////////////////////////////
+
   fillPattern(pattern);
   for(int level = 1; level<11; level++)
   {
@@ -172,7 +180,7 @@ void setup() {
     digitalWrite(successLed,HIGH);
     delay(400);
     digitalWrite(successLed,LOW);
-    for(int i=0; i<10; i++){
+    for(int i=0; i<10; i++){ //Reset input array
       userInput[i] = 0;
     }
     delay(pause);
